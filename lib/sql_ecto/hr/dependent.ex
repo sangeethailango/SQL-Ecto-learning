@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Dependent do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:dependent_id, :integer, []}
+  @primary_key {:id, :integer, autogenerate: false}
 
   schema "dependents" do
 

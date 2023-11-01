@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Job do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:job_id, :integer, []}
+  @primary_key {:id, :integer, autogenerate: false}
 
   schema "jobs" do
 
