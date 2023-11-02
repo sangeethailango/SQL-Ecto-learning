@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Location do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:id, :integer, autogenerate: false}
+  @primary_key {:location_id, :integer, autogenerate: false}
 
   schema "locations" do
 
@@ -10,7 +10,7 @@ defmodule SqlEcto.Hr.Location do
     field :postal_code, :string
     field :city, :string
     field :state_province, :string
-    field :country_id, :integer
+    field :country_id, :string
 
   end
 

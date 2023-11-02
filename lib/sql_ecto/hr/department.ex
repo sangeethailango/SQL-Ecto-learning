@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Department do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:id, :integer, autogenerate: false}
+  @primary_key {:department_id, :integer, autogenerate: false}
 
   schema "departments" do
 
