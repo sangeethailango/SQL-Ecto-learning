@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Location do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:location_id, :integer, []}
+  @primary_key {:location_id, :integer, autogenerate: false}
 
   schema "locations" do
 

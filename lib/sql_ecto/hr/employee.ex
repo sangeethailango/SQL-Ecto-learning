@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Employee do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:employee_id, :integer, []}
+  @primary_key {:employee_id, :integer, autogenerate: false}
 
   schema "employees" do
 
@@ -18,6 +18,7 @@ defmodule SqlEcto.Hr.Employee do
 
   end
 
+  @spec changeset(Ecto.Changeset.t(), any()) :: Ecto.Changeset.t()
   def changeset(employees, _params) do
     employees
     |> validate_required(:last_name)

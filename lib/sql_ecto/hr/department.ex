@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Department do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:department_id, :integer, []}
+  @primary_key {:department_id, :integer, autogenerate: false}
 
   schema "departments" do
 
@@ -11,6 +11,7 @@ defmodule SqlEcto.Hr.Department do
 
   end
 
+  @spec changeset(Ecto.Changeset.t(), any()) :: Ecto.Changeset.t()
   def changeset(departments, _params) do
     departments
     |> validate_required(:department_name)

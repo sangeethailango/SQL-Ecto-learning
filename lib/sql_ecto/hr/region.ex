@@ -2,7 +2,7 @@ defmodule SqlEcto.Hr.Region do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @primary_key {:region_id, :integer, []}
+  @primary_key {:region_id, :integer, autogenerate: false}
 
   schema "regions" do
 
